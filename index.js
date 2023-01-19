@@ -11,13 +11,13 @@ reset.addEventListener('click', () => {
     inp[0].value = '';
 });
 
-function Random(max, min) {
+function Random(min, max) {
     num.innerHTML = Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function Rez() {
-    const max = Number(inp[1].value);
-    const min = Number(inp[0].value);
+    const min = Number(inp[1].value);
+    const max = Number(inp[0].value);
 
-    return Random(max, min);
+    return Random(min, max);
 }
