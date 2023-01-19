@@ -1,0 +1,97 @@
+body {
+    background-color: blueviolet;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: 'oswald';
+    min-width: 320px;
+}
+
+#num {
+    padding-bottom: 50px;
+    color: white;
+    font-size: 50px;
+}
+
+.button, .reset {
+    position: relative;
+    cursor: pointer;
+    border: 0;
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 15px 50px;
+    transition: .5s;
+    font-family: 'oswald';
+}
+
+.button:hover {
+    background-color: rgb(255, 182, 46);
+}
+
+.reset {
+    background-color: rgb(223, 82, 82);
+}
+
+.reset:hover {
+    background-color: rgb(207, 97, 97);
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105%;
+    height: 110%;
+    background-color: rgb(226, 113, 61);
+    z-index: -1;
+    transition: .2s;
+}
+
+.reset::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 105%;
+    height: 110%;
+    background-color: rgb(241, 102, 167);
+    z-index: -1;
+    transition: .2s;
+}
+
+.reset:active::after {
+    width: 100%;
+    height: 100%;
+}
+
+.button:active::after {
+     width: 100%;
+     height: 100%;
+}
+
+.inp {
+    outline: none;
+    margin-top: 100px;
+
+    padding: 10px 40px;
+    font-size: 16px;
+    font-family: 'oswald';
+}
+
+.inp::-webkit-outer-spin-button,
+.inp::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.flex-button, 
+.flex-inp {
+    display: flex;
+    align-items: flex-end;
+    gap: 50px;
+}
