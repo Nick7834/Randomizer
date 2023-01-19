@@ -7,8 +7,8 @@ button.addEventListener('click', Rez);
 reset.addEventListener('click', () => {
     num.innerHTML = 0;
 
-    inp[0].value = '';
     inp[1].value = '';
+    inp[0].value = '';
 });
 
 function Random(max, min) {
@@ -16,8 +16,8 @@ function Random(max, min) {
 }
 
 function Rez() {
-    const max = Number(inp[0].value);
-    const min = Number(inp[1].value);
+    const max = Number(inp[1].value);
+    const min = Number(inp[0].value);
 
     return Random(max, min);
 }
